@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "SorveSoftApi.Controllers.ProductControllers",
+    "Method": "Get",
+    "RelativePath": "v1/products",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

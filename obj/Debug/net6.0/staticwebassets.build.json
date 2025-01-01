@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "LNy+4ycU5kS7NpI0yUccf/YaITDjFhvkIwANjsObBbM=",
+  "Source": "SorveSoftApi",
+  "BasePath": "_content/SorveSoftApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
