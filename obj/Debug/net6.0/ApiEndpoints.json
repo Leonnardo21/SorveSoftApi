@@ -1,12 +1,81 @@
 [
   {
     "ContainingType": "SorveSoftApi.Controllers.ProductControllers",
-    "Method": "Get",
+    "Method": "GetAsync",
     "RelativePath": "v1/products",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SorveSoftApi.Controllers.ProductControllers",
+    "Method": "PostAsync",
+    "RelativePath": "v1/products",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product",
+        "Type": "SorveSoftApi.Models.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SorveSoftApi.Controllers.ProductControllers",
+    "Method": "GetByIdAsync",
+    "RelativePath": "v1/products/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SorveSoftApi.Controllers.ProductControllers",
+    "Method": "PutAsync",
+    "RelativePath": "v1/products/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "SorveSoftApi.Models.Product",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SorveSoftApi.Controllers.ProductControllers",
+    "Method": "DeleteAsync",
+    "RelativePath": "v1/products/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

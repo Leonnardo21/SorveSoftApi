@@ -1,4 +1,4 @@
-﻿namespace SorveSoftApi.Utils
+﻿namespace SorveSoftApi.Utils.Enums
 {
     public enum EPaymentMethod
     {

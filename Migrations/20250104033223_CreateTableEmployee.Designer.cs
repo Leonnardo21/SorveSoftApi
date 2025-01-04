@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SorveSoftApi.Data;
 
@@ -11,9 +12,10 @@ using SorveSoftApi.Data;
 namespace SorveSoftApi.Migrations
 {
     [DbContext(typeof(SorveSoftDbContext))]
-    partial class SorveSoftDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250104033223_CreateTableEmployee")]
+    partial class CreateTableEmployee
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

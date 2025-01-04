@@ -15,6 +15,7 @@ C:\Users\leoso\source\repos\SorveSoftApi\bin\Debug\net6.0\Microsoft.EntityFramew
 C:\Users\leoso\source\repos\SorveSoftApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\leoso\source\repos\SorveSoftApi\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\leoso\source\repos\SorveSoftApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\leoso\source\repos\SorveSoftApi\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\leoso\source\repos\SorveSoftApi\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 C:\Users\leoso\source\repos\SorveSoftApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\leoso\source\repos\SorveSoftApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
@@ -48,6 +49,7 @@ C:\Users\leoso\source\repos\SorveSoftApi\obj\Debug\net6.0\SorveSoftApi.AssemblyI
 C:\Users\leoso\source\repos\SorveSoftApi\obj\Debug\net6.0\SorveSoftApi.AssemblyInfo.cs
 C:\Users\leoso\source\repos\SorveSoftApi\obj\Debug\net6.0\SorveSoftApi.csproj.CoreCompileInputs.cache
 C:\Users\leoso\source\repos\SorveSoftApi\obj\Debug\net6.0\SorveSoftApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\leoso\source\repos\SorveSoftApi\obj\Debug\net6.0\SorveSoftApi.sourcelink.json
 C:\Users\leoso\source\repos\SorveSoftApi\obj\Debug\net6.0\scopedcss\bundle\SorveSoftApi.styles.css
 C:\Users\leoso\source\repos\SorveSoftApi\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\leoso\source\repos\SorveSoftApi\obj\Debug\net6.0\staticwebassets.development.json

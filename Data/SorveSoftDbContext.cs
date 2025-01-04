@@ -7,6 +7,7 @@ namespace SorveSoftApi.Data
     public class SorveSoftDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; } = null!;
+        public DbSet<Employee> Employees { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
@@ -16,6 +17,7 @@ namespace SorveSoftApi.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ProductMap());
+            modelBuilder.ApplyConfiguration(new EmployeeMap());
         }
     }
 }

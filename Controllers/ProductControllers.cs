@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SorveSoftApi.Data;
 using SorveSoftApi.Models;
+using SorveSoftApi.Utils;
 
 namespace SorveSoftApi.Controllers
 {
@@ -16,15 +17,16 @@ namespace SorveSoftApi.Controllers
         }
 
         [HttpGet("products")]
-        public async Task<IActionResult> GetAsync([FromServices] SorveSoftDbContext context)
+        [TypeFilter(typeof(ExceptionFilter))]
+        public async Task<IActionResult> GetAsync()
         {
             var products = await _context.Products.ToListAsync();
-
             return Ok(products);
         }
 
         [HttpGet("products/{id:int}")]
-        public async Task<IActionResult> GetByIdAsync([FromServices] SorveSoftDbContext context, [FromRoute] int id)
+        [TypeFilter(typeof(ExceptionFilter))]
+        public async Task<IActionResult> GetByIdAsync([FromRoute] int id)
         {
             var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
             if (product == null)
@@ -34,17 +36,20 @@ namespace SorveSoftApi.Controllers
         }
 
         [HttpPost("products")]
-        public async Task<IActionResult> PostAsync([FromServices] SorveSoftDbContext context, [FromBody] Product product)
+        [TypeFilter(typeof(ExceptionFilter))]
+        public async Task<IActionResult> PostAsync([FromBody] Product product)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
             return Created($"{product.Id}", product);
         }
 
         [HttpPut("products/{id:int}")]
-        public async Task<IActionResult> PutAsync([FromServices] SorveSoftDbContext context, [FromRoute] int id, [FromBody] Product model)
+        [TypeFilter(typeof(ExceptionFilter))]
+        public async Task<IActionResult> PutAsync([FromRoute] int id, [FromBody] Product model)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -52,7 +57,7 @@ namespace SorveSoftApi.Controllers
             var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
             if (product == null)
                 return NotFound();
-            
+
             product.Name = model.Name;
             product.Description = model.Description;
             product.Category = model.Category;
@@ -62,19 +67,21 @@ namespace SorveSoftApi.Controllers
 
             _context.Products.Update(product);
             await _context.SaveChangesAsync();
-            
+
             return Ok(product);
         }
 
         [HttpDelete("products/{id:int}")]
-        public async Task<IActionResult> DeleteAsync([FromServices] SorveSoftDbContext context, [FromRoute] int id)
+        [TypeFilter(typeof(ExceptionFilter))]
+        public async Task<IActionResult> DeleteAsync([FromRoute] int id)
         {
-            var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
-            if (product == null)
-                return NotFound();
-            _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
-            return NoContent();
+                var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
+                if (product == null)
+                    return NotFound();
+
+                _context.Products.Remove(product);
+                await _context.SaveChangesAsync();
+                return NoContent();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using SorveSoftApi.Utils;
+﻿using SorveSoftApi.Utils.Enums;
 
 namespace SorveSoftApi.Models
 {
